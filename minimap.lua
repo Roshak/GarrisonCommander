@@ -39,7 +39,7 @@ if (me ==  gc and  not IsAddOnLoaded(gb) or
       function (this,button)
         local shift,ctrl,alt=IsShiftKeyDown(),IsControlKeyDown(),IsAltKeyDown()
         local requested=0
-        print (shift,ctrl,alt)
+        --print (shift,ctrl,alt)
         if ctrl then
           if alt then
             requested=LE_GARRISON_TYPE_9_0
