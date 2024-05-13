@@ -331,7 +331,9 @@ function module:GarrisonTraitCountersFrame_OnLoad(this, tooltipString)
 		if #list > 0 then wipe(list) end
 		local done
 		local i=0
+--@debug@		
 		print("Using",kpairs)
+--@end-debug@
 		for k,v in kpairs(ns.catTable) do
 			if not done then
 				done=true

@@ -453,7 +453,9 @@ local function drawItemButtons(frame)
 	local single=settings.useOneChance
 	--for j = 1, #tItems do
 	--local i=tOrder[j]
+	--@debug@
 	print("ShipControl",classlist)
+	--@end-debug@
 	local wrap=math.ceil(#classlist/2 +1)
 	for frameIndex,i in ipairs(classlist) do
 		local row = GMC.ignoreFrames[frameIndex]

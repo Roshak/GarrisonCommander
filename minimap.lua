@@ -20,11 +20,15 @@ local function addTooltip(d,key,message)
   if (d==message) then return end
   GameTooltip:AddLine(key .. " " .. message)
 end
+--@debug@
 print("GCB",me,gc,IsAddOnLoaded(gc),gb,IsAddOnLoaded(gb))
+--@end-debug@
 if (me ==  gc and  not IsAddOnLoaded(gb) or
     me ==  gb and  not IsAddOnLoaded(gc)
 ) then
+--@debug@
     print("Hooking tooltip")
+--@end-debug@
      ExpansionLandingPageMinimapButton:HookScript("OnEnter",
      function(this)
       local d=this.description

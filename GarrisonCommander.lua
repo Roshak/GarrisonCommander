@@ -1056,7 +1056,9 @@ end
 
 local helpwindow -- pseudo static
 function addon:ShowHelpWindow(button)
-  print("hewlp")
+--@debug@
+	print("hewlp")
+--@end-debug@
 	addon:Help()
 end
 function addon:Toggle(button)
@@ -1410,7 +1412,9 @@ do
 		lastTab=2
 	end
 	function addon:RenderFollowerPageMissionList(dummy,followerID,force)
+--@debug@		
 		print(ns.bigscreen,GMFFollowers:IsVisible())
+--@end-debug@		
 		--if not ns.bigscreen then return end
 		if not ns.bigscreen and not self:GetBoolean("FOLLOWERMISSIONLIST") then
 			if mh then mh:Hide() end
@@ -1750,7 +1754,9 @@ function addon:RaiseCompleteDialog()
 	if f:GetFrameLevel() < 80 then
 		f:SetFrameLevel(80)
 	end
+--@debug@
 	print("Dialog:",GMFMissions.CompleteDialog:GetFrameLevel())
+--@end-debug@
 	--C_Timer.After(0.1,function() local f=GMFMissions.CompleteDialog print("Dialog:",f:GetFrameLevel()) if f:GetFrameLevel() < 45 then f:SetFrameLevel(45) end print("Dialog:",f:GetFrameLevel()) end)
 end
 local newsframes={}
